@@ -13,14 +13,11 @@ autoScalaLibrary := false
 // Do not append Scala versions to the generated artifacts
 crossPaths := false
 
-// Java 8 style
-javacOptions in (Compile) ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint:deprecation")
-
-javacOptions in (Compile, doc) := Seq("-source", "1.8")
+javacOptions in (Compile) ++= Seq("-Xlint:deprecation")
 
 //------------------------------------------------------------------------------
 
-libraryDependencies += "tv.cntt" % "sinetja" % "1.2-SNAPSHOT"
+libraryDependencies += "tv.cntt" % "sinetja" % "1.2"
 
 // Xitrum uses SLF4J, an implementation of SLF4J is needed
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
