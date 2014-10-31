@@ -7,7 +7,7 @@
   <logger name="org.fusesource.scalate" level="INFO"/>
 
   <!-- Log to console in development mode -->
-  <if condition='!property("xitrum.mode").contains("production")'>
+  <if condition='!property("sinetja.mode").contains("production")'>
     <then>
       <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -23,15 +23,15 @@
   </if>
 
   <!-- Log to file in production mode -->
-  <if condition='property("xitrum.mode").contains("production")'>
+  <if condition='property("sinetja.mode").contains("production")'>
     <then>
       <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./log/xitrum.log</file>
+        <file>./log/sinetja.log</file>
         <encoder>
           <pattern>[%level] [%d{yy-MM-dd HH:mm:ss}] %c{1}: %m%n</pattern>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-          <fileNamePattern>./log/xitrum.log.%d{yy-MM}</fileNamePattern>
+          <fileNamePattern>./log/sinetja.log.%d{yy-MM}</fileNamePattern>
         </rollingPolicy>
       </appender>
 
