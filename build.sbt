@@ -17,7 +17,7 @@ javacOptions in (Compile, doc) := Seq("-source", "1.6")
 
 //------------------------------------------------------------------------------
 
-libraryDependencies += "tv.cntt" % "sinetja" % "1.3.0"
+libraryDependencies += "tv.cntt" % "sinetja" % "1.4.0"
 
 // Sinetja uses SLF4J, an implementation of SLF4J is needed
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.2"
